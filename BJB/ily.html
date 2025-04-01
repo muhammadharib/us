@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where It All Began ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .stars {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4em;
+            margin: 40px 0;
+            background: linear-gradient(45deg, #ff69b4, #ff8da1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .heart-container {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 50px auto;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .heart {
+            background: #ff69b4;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform: rotate(45deg);
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .heart::before {
+            left: -50%;
+        }
+
+        .heart::after {
+            top: -50%;
+        }
+
+        @keyframes pulse {
+            0% { transform: rotate(45deg) scale(1); }
+            50% { transform: rotate(45deg) scale(1.1); }
+            100% { transform: rotate(45deg) scale(1); }
+        }
+
+        .message {
+            font-size: 1.5em;
+            line-height: 1.6;
+            margin: 30px auto;
+            max-width: 800px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        .special-moments {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+            animation-delay: 1s;
+        }
+
+        .moment {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            padding: 20px;
+            border-radius: 15px;
+            width: 250px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .moment:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .moment h3 {
+            color: #ff69b4;
+            font-family: 'Dancing Script', cursive;
+            margin: 10px 0;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .floating-hearts {
+            position: fixed;
+            pointer-events: none;
+            z-index: 1;
+            font-size: 2em;
+        }
+
+        @keyframes float-up {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+
+        .next-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+            animation-delay: 1.5s;
+        }
+
+        .next-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <h1>Where It All Began ✨</h1>
+        
+        <div class="heart-container" onclick="createHearts()">
+            <div class="heart"></div>
+        </div>
+
+        <div class="message">
+            From the moment you entered my life, everything changed. 
+            You brought colors I never knew existed, and filled my world with a joy I never thought possible.
+        </div>
+
+        <div class="special-moments">
+            <div class="moment" onclick="showLove(this)">
+                <h3>The First Tag</h3>
+                <p>That magical moment when our paths crossed, and my heart knew Jis ka Intezaar tha, Wo Aagaya... 💫</p>
+            </div>
+            <div class="moment" onclick="showLove(this)">
+                <h3>Your Smile</h3>
+                <p>The way your smile brightens even my darkest days, making every moment spent worth living... ✨</p>
+            </div>
+            <div class="moment" onclick="showLove(this)">
+                <h3>Your Laugh</h3>
+                <p>The radiance flown through my soul, The moment we had our fisrt laugh, i instantly knew i wanna keep that beautiful smile on, Forever... 💝</p>
+            </div>
+            <div class="moment" onclick="showLove(this)">
+                <h3>Your Voice</h3>
+                <p>Everyday, i wake up longing to hear you, and every night i sleep longing your existnce, something spartkled on my insides when i heard you, i still remember when i first heard you, i had to take a moment to take it all in, and i definitely knew, i wanna keep hearing everything she has to say... 💞</p>
+            </div>
+        </div>
+
+        <a href="ohdw.html" class="next-button">Continue Our Journey ➜</a>
+    </div>
+
+    <script>
+        function createStars() {
+            const stars = document.querySelector('.stars');
+            for(let i = 0; i < 200; i++) {
+                const star = document.createElement('div');
+                star.style.position = 'absolute';
+                star.style.width = '2px';
+                star.style.height = '2px';
+                star.style.background = 'white';
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.animation = `twinkle ${1 + Math.random() * 3}s infinite`;
+                stars.appendChild(star);
+            }
+        }
+
+        function createHearts() {
+            for(let i = 0; i < 10; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.className = 'floating-hearts';
+                    heart.innerHTML = '❤️';
+                    heart.style.left = `${Math.random() * 100}vw`;
+                    heart.style.animation = `float-up ${3 + Math.random() * 3}s ease-out forwards`;
+                    document.body.appendChild(heart);
+                    setTimeout(() => heart.remove(), 6000);
+                }, i * 300);
+            }
+        }
+
+        function showLove(element) {
+            element.style.transform = 'scale(1.05)';
+            setTimeout(() => element.style.transform = '', 300);
+            createHearts();
+        }
+
+        window.addEventListener('load', createStars);
+    </script>
+</body>
+</html>
